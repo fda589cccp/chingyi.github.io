@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chingyi Portfolio</title>
+    <link rel="icon" type="image/png" href="pictures/littlecat.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-left">Chingyi</div>
+      <div class="nav-right" onclick="location.href='about.html'">About me</div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Profile Section -->
+      <section class="profile-section">
+        <div class="profile-image-container">
+          <img
+            src="pictures/my picture.png"
+            alt="Profile Picture"
+            class="profile-image"
+          />
+        </div>
+
+        <div class="profile-text">
+          <h1 class="greeting">
+            <span class="hello">你好，</span><span class="name">我是靖詒</span>
+          </h1>
+          <p class="description">
+            一位有五年經驗的設計師，專長於視覺設計與 3D
+            渲染。喜歡探索各種不同的設計風格與效果，並相信好的設計能融入生活，在日常的每個角落都被看見與實踐。
+          </p>
+          <button class="about-btn" onclick="location.href='about.html'">
+            關於我
+          </button>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills-section">
+        <h2 class="skills-title">My Skills</h2>
+        <div class="folders-container">
+          <!-- Folder 1: Visual/Illustration Design -->
+          <div class="folder-item" data-folder="1">
+            <div class="folder-icon-container">
+              <img
+                src="pictures/folder-close.png"
+                alt="Closed Folder"
+                class="folder-closed"
+              />
+              <img
+                src="pictures/openfolder-picture.png"
+                alt="Open Folder Picture"
+                class="folder-open"
+              />
+            </div>
+            <div class="folder-text">
+              <h3>視覺/插圖設計</h3>
+              <p>
+                將想法轉化為鮮明的圖像語言，無論是品牌宣傳或排版應用，都能用插圖與視覺設計打造獨特的氛圍與辨識度。
+              </p>
+              <button class="view-btn" onclick="window.open('https://drive.google.com/file/d/1Xlg44Di3L6cCs1gbvKvtdpvvbEHhH43_/view?usp=drive_link', '_blank')">點我觀看</button>
+            </div>
+          </div>
+
+          <!-- Folder 2: 3D Rendering -->
+          <div class="folder-item" data-folder="2">
+            <div class="folder-icon-container">
+              <img
+                src="pictures/folder-close.png"
+                alt="Closed Folder"
+                class="folder-closed"
+              />
+              <img
+                src="pictures/openfolder-3d.png"
+                alt="Open Folder 3D"
+                class="folder-open"
+              />
+            </div>
+            <div class="folder-text">
+              <h3>產品3D渲染</h3>
+              <p>
+                以 3D
+                渲染技術模擬實際的材質與光影，真實呈現產品的外觀與細節，讓概念在正式打樣前就能清楚展現。
+              </p>
+              <button class="view-btn" onclick="window.open('https://drive.google.com/file/d/1aVpIFNCVsScLz1MD_ivwqPfONoDjvbYo/view?usp=drive_link', '_blank')">點我觀看</button>
+            </div>
+          </div>
+
+          <!-- Folder 3: 3D Video -->
+          <div class="folder-item" data-folder="3">
+            <div class="folder-icon-container">
+              <img
+                src="pictures/folder-close.png"
+                alt="Closed Folder"
+                class="folder-closed"
+              />
+              <img
+                src="pictures/openfolder-video.png"
+                alt="Open Folder Video"
+                class="folder-open"
+              />
+            </div>
+            <div class="folder-text">
+              <h3>產品3D渲染影片</h3>
+              <p>
+                透過動態表現與視覺敘事，將產品的功能與質感以影片形式完整展現，帶來更生動的觀賞體驗。
+              </p>
+              <button class="view-btn" onclick="window.open('https://www.youtube.com/playlist?list=PL0JFRT24sdsY_-3LdchnCnw41LojqQCDD', '_blank')">點我觀看</button>
+            </div>
+          </div>
+
+          <!-- Folder 4: Catalog -->
+          <div class="folder-item" data-folder="4">
+            <div class="folder-icon-container">
+              <img
+                src="pictures/folder-close.png"
+                alt="Closed Folder"
+                class="folder-closed"
+              />
+              <img
+                src="pictures/openfolder-catalog.png"
+                alt="Open Folder Catalog"
+                class="folder-open"
+              />
+            </div>
+            <div class="folder-text">
+              <h3>型錄製作</h3>
+              <p>
+                結合結構化的資訊編排與美觀的視覺設計，讓產品型錄兼具閱讀性與設計感，清楚傳遞重點內容。
+              </p>
+              <button class="view-btn" onclick="window.open('https://indd.adobe.com/view/82444fa6-7f73-4b3c-9e4a-388fd0876016', '_blank')">點我觀看</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Background Cat -->
+      <div class="background-cat-container">
+        <img
+          src="pictures/background-cat.png"
+          alt="Background Cat"
+          class="background-cat"
+        />
+      </div>
+    </main>
+
+    <!-- Pink Cat -->
+    <div class="pink-cat-container">
+      <img src="pictures/cat-pink.png" alt="Pink Cat" class="pink-cat" />
+      <div class="cat-eyes">
+        <div class="eye left-eye">
+          <div class="eyeball"></div>
+        </div>
+        <div class="eye right-eye">
+          <div class="eyeball"></div>
+        </div>
+      </div>
+      <div class="cat-speech-bubble">
+        可以和我互動喵～
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="responsive-background.js"></script>
+  </body>
+</html>

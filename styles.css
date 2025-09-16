@@ -1,0 +1,496 @@
+@font-face {
+    font-family: 'TsuhsiantiProportional';
+    src: url('tsuhsianti-proportional.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'TsuhsiantiProportional', sans-serif;
+    background-color: #74c7ef;
+    color: #6f304a;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-image: url('pictures/background.png');
+    background-size: calc(100% - 20px) auto;
+    background-repeat: no-repeat;
+    background-position: center clamp(100px, 12vh, 150px);
+    background-attachment: scroll;
+    scroll-padding-top: 0;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: clamp(45px, 8vh, 65px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 clamp(20px, 5vw, 80px);
+    z-index: 200;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left, .nav-right {
+    font-size: clamp(18px, 3.5vw, 24px);
+    font-weight: bold;
+    color: #6f304a;
+}
+
+.nav-left {
+    margin-left: 0;
+}
+
+.nav-right {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 0;
+}
+
+.nav-right:hover {
+    color: #74c7ef;
+}
+
+/* Main Content */
+.main-content {
+    padding-top: clamp(180px, 25vh, 300px);
+    max-width: min(1200px, 90vw);
+    margin: 0 auto;
+    padding-left: clamp(20px, 4vw, 50px);
+    padding-right: clamp(20px, 4vw, 50px);
+    position: relative;
+    z-index: 10;
+    padding-bottom: clamp(200px, 20vh, 300px);
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 6vw, 80px);
+    margin-top: clamp(40px, 8vh, 120px);
+    margin-bottom: clamp(80px, 12vh, 150px);
+    padding: clamp(30px, 5vh, 50px) 0;
+    flex-wrap: wrap;
+}
+
+.profile-image-container {
+    position: relative;
+    width: clamp(250px, 30vw, 350px);
+    height: clamp(250px, 30vw, 350px);
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: clamp(15px, 2vw, 25px);
+}
+
+.profile-text {
+    flex: 1;
+    max-width: min(700px, 100%);
+    min-width: 300px;
+}
+
+.greeting {
+    margin-bottom: clamp(25px, 4vh, 40px);
+    line-height: 1.2;
+}
+
+.hello {
+    font-size: clamp(2.5em, 6vw, 4.5em);
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-right: clamp(8px, 1.5vw, 15px);
+}
+
+.name {
+    font-size: clamp(2em, 4.5vw, 3.2em);
+    font-weight: bold;
+    color: #74c7ef;
+}
+
+.description {
+    font-size: clamp(1.2em, 2.8vw, 1.8em);
+    line-height: 1.8;
+    margin-bottom: clamp(25px, 4vh, 40px);
+    color: #4d4d4d;
+}
+
+.about-btn {
+    background-color: #74c7ef;
+    color: white;
+    border: none;
+    padding: clamp(12px, 2vh, 18px) clamp(20px, 3vw, 35px);
+    font-size: clamp(1.3em, 2.5vw, 1.6em);
+    font-family: 'TsuhsiantiProportional', sans-serif;
+    border-radius: clamp(20px, 3vw, 30px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(116, 199, 239, 0.3);
+    font-weight: bold;
+    display: inline-block;
+    width: auto;
+    min-width: fit-content;
+    white-space: nowrap;
+}
+
+.about-btn:hover {
+    background-color: #6f304a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(116, 199, 239, 0.4);
+}
+
+/* Skills Section */
+.skills-section {
+    margin-bottom: clamp(50px, 8vh, 100px);
+    padding: 0 clamp(20px, 4vw, 50px);
+    text-align: center;
+    position: relative;
+    z-index: 15;
+}
+
+.skills-title {
+    font-size: clamp(2.5em, 6vw, 4em);
+    font-weight: bold;
+    margin-bottom: clamp(80px, 10vh, 120px);
+    color: #6f304a;
+    text-align: center;
+}
+
+.folders-container {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(10px, 1.5vw, 20px);
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+    .folders-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(20px, 3vw, 30px);
+    }
+    
+    .folder-item {
+        flex: 0 1 calc(50% - 15px);
+        min-width: 220px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .folders-container {
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(50px, 8vw, 70px);
+    }
+}
+
+/* Folder Styling */
+.folder-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 280px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .folder-item {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+        padding-top: 30px;
+    }
+}
+
+.folder-icon-container {
+    position: relative;
+    width: clamp(120px, 15vw, 160px);
+    height: clamp(150px, 22vw, 220px);
+    margin: 0 auto clamp(30px, 4vh, 40px) auto;
+}
+
+.folder-closed, .folder-open {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: clamp(120px, 15vw, 160px);
+    height: auto;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.folder-open {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8) rotate(-10deg);
+}
+
+.folder-item:hover .folder-closed {
+    opacity: 0;
+    transform: translateY(-10px) scale(1.1) rotate(5deg);
+}
+
+.folder-item:hover .folder-open {
+    opacity: 1;
+    transform: translateY(-10px) scale(1) rotate(0deg);
+}
+
+.folder-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-text h3 {
+    font-size: clamp(1.3em, 3vw, 1.8em);
+    font-weight: bold;
+    margin-bottom: clamp(15px, 3vh, 20px);
+    color: #6f304a;
+}
+
+.folder-text p {
+    font-size: clamp(1.2em, 2.8vw, 1.6em);
+    line-height: 1.6;
+    margin-bottom: clamp(20px, 4vh, 25px);
+    color: #4d4d4d;
+    text-align: center;
+    flex: 1;
+}
+
+.view-btn {
+    background-color: #74c7ef;
+    color: white;
+    border: none;
+    padding: clamp(12px, 2vh, 16px) clamp(20px, 3vw, 30px);
+    font-size: clamp(1.3em, 2.5vw, 1.5em);
+    font-family: 'TsuhsiantiProportional', sans-serif;
+    border-radius: clamp(18px, 3vw, 25px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: auto;
+    display: inline-block;
+    width: auto;
+    min-width: fit-content;
+    white-space: nowrap;
+}
+
+.view-btn:hover {
+    background-color: #6f304a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(116, 199, 239, 0.3);
+}
+
+/* Background Cat */
+.background-cat-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.background-cat {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+/* Pink Cat Eye Tracking */
+.pink-cat-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: clamp(120px, 15vw, 200px);
+    height: clamp(120px, 15vw, 200px);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.pink-cat {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cat-eyes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.eye {
+    position: absolute;
+    width: 18%;
+    height: 11%;
+    top: 50%;
+    border-radius: 50%;
+}
+
+.left-eye {
+    left: calc(20% - 3px);
+}
+
+.right-eye {
+    left: calc(62% - 30px);
+}
+
+.eyeball {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    top: 50%;
+    left: calc(50% - 10px);
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-out;
+}
+
+.right-eye .eyeball {
+    top: calc(50% + 3px);
+}
+
+/* Cat Speech Bubble */
+.cat-speech-bubble {
+    position: fixed;
+    right: clamp(140px, 18vw, 220px);
+    bottom: clamp(15px, 3vh, 30px);
+    background: rgba(255, 255, 255, 0.9);
+    color: #6f304a;
+    padding: clamp(12px, 2.5vw, 18px) clamp(16px, 3vw, 24px);
+    border-radius: clamp(16px, 3vw, 24px);
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    backdrop-filter: blur(5px);
+}
+
+.cat-speech-bubble::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    bottom: clamp(12px, 2.5vh, 20px);
+    border: clamp(8px, 1.5vw, 12px) solid transparent;
+    border-left-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        margin-top: clamp(20px, 4vh, 60px);
+    }
+    
+    .profile-image-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .navbar {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-position: center clamp(100px, 12vh, 150px);
+    }
+    
+    .hello {
+        font-size: 3.5em;
+    }
+    
+    .name {
+        font-size: 2.5em;
+    }
+    
+    .description {
+        font-size: 1.2em;
+    }
+    
+    .main-content {
+        padding-top: clamp(80px, 10vh, 120px);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .skills-section {
+        margin-bottom: clamp(30px, 5vh, 50px);
+        padding: 0 20px;
+    }
+    
+    .skills-title {
+        margin-bottom: 10px;
+    }
+    
+    .profile-section {
+        margin-bottom: clamp(40px, 6vh, 80px);
+    }
+    
+    .pink-cat-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .folder-text p {
+        text-align: center;
+    }
+}
+
+/* Animation Effects */
+.profile-section {
+    animation: fadeInUp 1s ease-out;
+}
+
+.skills-section {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
